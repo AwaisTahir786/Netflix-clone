@@ -7,7 +7,24 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
+@layer utilities {
+  .mask-gradient {
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+    
+  }
+  .nav-dark{
+    background: #141414;
+  }
+  .scroll-hidden::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+ 
+  
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -26,8 +43,3 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
